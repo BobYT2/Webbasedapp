@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Generated Code</title>
+</head>
+<body>
+    <h1>{{ title }} - Generated Code</h1>
+
+    {% for lang, content in files.items() %}
+        <h2>{{ lang.upper() }}</h2>
+        <pre>{{ content }}</pre>
+        <a href="/download/{{ lang }}">Download {{ lang.upper() }}</a><br><br>
+    {% endfor %}
+</body>
+</html>

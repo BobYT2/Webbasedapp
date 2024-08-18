@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Builder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Web App Builder</h1>
+    <form id="appForm" action="/generate" method="post">
+        <label for="title">App Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label>Select Languages:</label><br>
+        <div id="language-container">
+            <input type="checkbox" id="html" name="languages" value="html">
+            <label for="html">HTML</label><br>
+            <input type="checkbox" id="css" name="languages" value="css">
+            <label for="css">CSS</label><br>
+            <input type="checkbox" id="js" name="languages" value="js">
+            <label for="js">JavaScript</label><br>
+            <input type="checkbox" id="python" name="languages" value="python">
+            <label for="python">Python</label><br>
+        </div>
+        <button type="button" id="add-more">Add More</button><br><br>
+
+        <button type="submit">Generate</button>
+    </form>
+
+    <p id="error-message" style="color: red; display: none;">Network error: Unable to submit the form.</p>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
