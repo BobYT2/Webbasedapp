@@ -1,4 +1,4 @@
-# Web-based-app-
+# Web based app
 1 .Prerequisites
 Python installed
 Flask installed (pip install flask)
